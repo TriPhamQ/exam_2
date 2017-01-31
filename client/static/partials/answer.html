@@ -1,0 +1,14 @@
+<h1>answer</h1>
+<div class="row">
+	<div class="input-field col s12">
+		<textarea id="textarea1" class="materialize-textarea" ng-model="newAnswer.comment"></textarea>
+		<label for="textarea1">Answer</label>
+	</div>
+	<div class="input-field col s12">
+		<input type="text" name="" value="" placeholder="Supporting Answer" ng-model="newAnswer.support">
+	</div>
+	<button class="btn waves-effect waves-light" type="button" name="button" ng-click="new()">Submit Question</button>
+</div>
+<div class="row" ng-hide="!token">
+	<button class="btn waves-effect waves-light" type="button" name="button" ng-click="logOut()">Log Out</button>
+</div>

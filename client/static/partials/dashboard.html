@@ -1,0 +1,21 @@
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Questions</th>
+				<th>Answer</th>
+				<th>Show</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="question in questions">
+                <td ng-bind="question.question"></td>
+				<td ng-bind="question.answers"></td>
+				<td><a ng-click="show(question._id)" href="">Show</a> <a ng-click="answer(question._id)" href="">Answer</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row" ng-hide="!token">
+	<button class="btn waves-effect waves-light" type="button" name="button" ng-click="logOut()">Log Out</button>
+</div>
