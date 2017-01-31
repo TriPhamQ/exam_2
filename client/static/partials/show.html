@@ -1,0 +1,47 @@
+<div class="row">
+    <h3 ng-bind="question[0]._user.name"></h3>
+    <h4 ng-bind="question[0].question"></h4>
+    <h5 ng-bind="question[0].description"></h5>
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+				<th>Description</th>
+				<th>From</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="quest in question">
+                <td ng-bind="quest.question"></td>
+				<td ng-bind="quest.description"></td>
+				<td ng-bind="quest._user.name"></td>
+            </tr>
+        </tbody>
+    </table> -->
+</div>
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Comment</th>
+                <td>Likes</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="comment in comments | orderBy: '-like'">
+                <td ng-bind="comment._user.name"></td>
+                <td ng-bind="comment.comment"></td>
+                <td ng-bind="comment.like"></td>
+                <td><a href="" ng-click="like(comment._id)">Like</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <a ng-click="answer()" href="">Answer</a>
+</div>
+<div class="row" ng-hide="!token">
+	<button class="btn waves-effect waves-light" type="button" name="button" ng-click="logOut()">Log Out</button>
+</div>
