@@ -41,7 +41,7 @@ module.exports = (function () {
 			// 		res.json(result);
 			// 	}
 			// });
-			Question.find({}).populate("_user").exec(function (err, result) {
+			Question.find({_id: req.body.questionid}).populate("_user").exec(function (err, result) {
 				if (err) {
 					console.log("Something went wrong with DB");
 				}
