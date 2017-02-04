@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 	path = require('path'),
 	models_path = path.join(__dirname, "../models"),
 	reg = new RegExp(".js$", "i"),
-	dbURI = 'mongodb://localhost/rushhour_db';
+	dbURI = 'mongodb://localhost/exam2_db';
 
 mongoose.Promise = global.Promise;
 
